@@ -97,3 +97,12 @@ path "sys/control-group/request" {
 path "identity/oidc/provider/+/authorize" {
     capabilities = ["read", "update"]
 }
+
+# Allow a token to lookup all other tokens
+path "auth/token/lookup" {
+    capabilities = ["read"]
+}
+
+path "auth/token/lookup-accessor" {
+    capabilities = ["create", "update"]
+}
