@@ -32,7 +32,7 @@ vault token lookup -accessor ACCESSOR
 vault list auth/token/accessors
 
 # Create a token with a 20s TTL
-token create -policy=default -ttl=20s
+vault token create -policy=default -ttl=20s
 
 # Lookup the token quickly!
 vault token lookup -accessor ACCESSOR
